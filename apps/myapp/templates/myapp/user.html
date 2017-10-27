@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <title>{{ user.alias }}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'myapp/css/styles.css' %}" media="screen" title="no title"  charset="utf-8">
+</head>
+<body>
+    <div id="header">
+            <p><a href="/friends">Home</a></p>
+        <p><a href="/logout">Logout</a></p>
+    </div>
+    <div id="wrapper">
+        <h1>{{ user.alias }}'s Profile</h1>
+        <h2>Name: {{ user.name }}</h2>
+        <h2>Email Address: {{ user.email }}</h2>
+    </div>
+        
+    
+</div> <!-- end wrapper -->    
+</body>
+</html>

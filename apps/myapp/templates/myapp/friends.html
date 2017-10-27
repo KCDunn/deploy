@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <title>Friends</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'myapp/css/styles.css' %}" media="screen" title="no title"  charset="utf-8">
+</head>
+<body>
+    <div id="header">
+        <p><a href="/logout">Logout</a></p>
+    </div>
+    <div id="wrapper">
+        <div>
+        <h1>Hello, {{loggedin.alias}}</h1>
+        <h2>Here is a list of your friends:</h2>
+        {% block content %}
+        
+        {% if friends %}
+            <table>
+                <thead>
+                    <tr>
+                        <th>Alias</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for friend in friends %}
+                <tr>
+                    <td>{{ friend.to_friend.alias }}</td>
+                    <td><a href="/user/{{friend.to_friend.id}}">view profile</a> | <a href="/connect/remove/{{friend.id}}">Remove as Friend</a></td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+        <p>No friends found.</p>
+        {% endif %}
+        {% endblock %}
+        </div>
+
+
+        <div>
+            <h2>Other users not in your friends list:</h2>
+            <table>
+                    <thead>
+                        <tr>
+                            <th>Alias</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {% for user in users %}
+                    <tr>
+                        <td>{{ user.alias }}</td>
+                        <td><a href="/user/{{user.id}}">view profile</a> | <a href="/connect/add/{{user.id}}">Add as Friend</a></td>
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+        </div>
+    
+</div> <!-- end wrapper -->    
+</body>
+</html>
