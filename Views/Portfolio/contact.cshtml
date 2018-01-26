@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfolio - contact</title>
+    <link rel="stylesheet" href="~/css/styles.css"/>
+</head>
+<body>
+    <h1>Contact Page</h1>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/projects">Projects</a></li>
+        <li><a href="/contact">Contact</a></li>
+        
+    </ul>
+    
+        <form action="/portfolioForm" method="Post">
+            Name:<input type="text" name="name"><br>
+            E-mail: <input type="email" name="email" autocomplete="off"><br>
+            <input type="submit">
+            <!-- <h3>@ViewBag.Name</h3>
+            <h3>@ViewBag.Email</h3> -->
+        </form>
+
+    
+</body>
+</html>

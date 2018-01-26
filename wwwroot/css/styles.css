@@ -1,0 +1,89 @@
+body {
+    background-image:url('../images/beach.JPG');
+    background-size: cover;
+    background-attachment:fixed;
+    background-repeat:no-repeat;
+}
+header {
+    width: 90%;
+    height: 100px;
+
+    background-image:url('images/beach.JPG');
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+#wrapper{
+    width: 97%;
+    /* height: 720px; */
+    padding: 20px;
+    margin: 20px auto;
+    background-color: rgb(255, 255, 255);
+    background-color: rgba(204, 225, 236, 0.7);
+    border-radius: 30px;
+}
+.projects{
+    width: 500px;
+    height: 500px;
+    background-color: #333;
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+    margin: 15px 15px;
+}
+#me{
+    width: 500px;
+    border: 10px solid #333;
+    border-radius: 10px;
+    margin: auto;
+    display: inline-block;
+    vertical-align: top;
+}
+#about{
+    width: 500px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 10px;
+}
+.display{
+    width: 200px;
+    display: block;
+}
+
+form{
+    width: 50%;
+    height: 200px;
+    padding: 20px;
+    margin-top: 15px;
+    background-color: #fff;
+    background-color: rgba(255,255,255,0.3);
+}
